@@ -1,0 +1,7 @@
+{
+    "watch": [
+        "../packages/api/dist/",
+        "../packages/common/dist/",
+        "../packages/database/dist/"
+    ]
+}

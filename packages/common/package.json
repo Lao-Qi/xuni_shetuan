@@ -1,0 +1,12 @@
+{
+	"name": "@xuni-shetuan/common",
+	"version": "1.0.0",
+	"main": "./dist/index.js",
+	"scripts": {
+		"dev": "npx tsup --watch",
+		"build": "npx tsup"
+	},
+	"keywords": [],
+	"author": "WangLaoQi (https://github.com/Lao-Qi)",
+	"license": "MIT"
+}

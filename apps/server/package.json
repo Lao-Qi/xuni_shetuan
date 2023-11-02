@@ -1,0 +1,24 @@
+{
+	"name": "@xuni-shetuan/server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node ./index.js",
+		"dev": "concurrently \"pnpm --filter ../../packages/* run dev\" \"npx tsup --watch\" \"nodemon ./dist/index.js --config ./nodemon.json\"",
+		"build": "pnpm --filter ../../packages/* run build pnpm --filter ../web run build && npx tsup"
+	},
+	"keywords": [],
+	"author": "WangLaoQi (https://github.com/Lao-Qi)",
+	"license": "MIT",
+	"dependencies": {
+		"@trpc/server": "^10.43.0",
+		"@xuni-shetuan/database": "workspace:^",
+		"express": "^4.18.2"
+	},
+	"devDependencies": {
+		"@types/copy": "^0.3.4",
+		"@types/express": "^4.17.20",
+		"copy": "^0.3.2"
+	}
+}
