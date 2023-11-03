@@ -1,5 +1,6 @@
 import { defineConfig } from "tsup"
-// import { copyFiles } from "./scripts/copy"
+import { join } from "path"
+import { copyFile } from "fs/promises"
 
 export default defineConfig({
     entry: ["./src/index.ts"],
@@ -10,8 +11,14 @@ export default defineConfig({
     splitting: true,
     sourcemap: false,
     clean: true,
-    outDir: "./dist",
-    publicDir: "../web/build",
+    outDir: "../../output/apps/server",
     treeshake: true,
-    bundle: true,
+    async onSuccess() {
+        await copyFile(join(__dirname, "./package.json"), "../../output/apps/server/package.json")
+
+        /** copy project config files */
+        await copyFile(join(__dirname, "../../package.json"), "../../output/package.json")
+        await copyFile(join(__dirname, "../../pnpm-lock.yaml"), "../../output/pnpm-lock.yaml")
+        await copyFile(join(__dirname, "../../pnpm-workspace.yaml"), "../../output/pnpm-workspace.yaml")
+    },
 })

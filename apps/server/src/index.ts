@@ -6,14 +6,14 @@ async function startExpressServer() {
     await database.initialize()
 
     const app = express()
-    app.use(express.static(join(__dirname, "./web")))
+    app.use(express.static(join(__dirname, "../web")))
 
     app.get("/", (_, res) => {
         res.send("aa")
     })
 
-    app.listen(3001, () => {
-        console.log("http://127.0.0.1:3001");
+    app.listen(8080, () => {
+        console.log("http://127.0.0.1:8080");
     })
 }
 

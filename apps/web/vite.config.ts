@@ -6,6 +6,6 @@ export default defineConfig({
 	plugins: [vue()],
 	build: {
 		emptyOutDir: true,
-		outDir: "./build/web"
+		outDir: "../../output/apps/web"
 	}
 })

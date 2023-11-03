@@ -27,4 +27,5 @@ build
 **/dist
 **/pruned
 
+output
 database.db

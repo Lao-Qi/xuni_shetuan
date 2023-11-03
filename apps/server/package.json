@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "node ./index.js",
 		"dev": "concurrently \"pnpm --filter ../../packages/* run dev\" \"npx tsup --watch\" \"nodemon ./dist/index.js --config ./nodemon.json\"",
-		"build": "pnpm --filter ../../packages/* run build pnpm --filter ../web run build && npx tsup"
+		"build": "pnpm --filter ../../packages/* run build && pnpm --filter ../web run build && npx tsup"
 	},
 	"keywords": [],
 	"author": "WangLaoQi (https://github.com/Lao-Qi)",

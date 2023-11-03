@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"format": "npx prettier . --write",
-		"build": "npx tsup"
+		"build": "pnpm --filter ./apps/server run build"
 	},
 	"keywords": [],
 	"author": "WangLaoQi (https://github.com/Lao-Qi)",
@@ -15,6 +15,7 @@
 		"@types/node": "^20.8.9",
 		"concurrently": "^8.2.2",
 		"esbuild": "^0.19.5",
+		"lerna": "^7.4.2",
 		"nodemon": "^3.0.1",
 		"prettier": "^3.0.3",
 		"tsup": "^7.2.0",
