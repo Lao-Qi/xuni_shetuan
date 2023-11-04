@@ -2,6 +2,7 @@
 	"name": "@xuni-shetuan/common",
 	"version": "1.0.0",
 	"main": "./index.js",
+	"private": true,
 	"scripts": {
 		"dev": "npx tsup --watch",
 		"build": "npx tsup"

@@ -9,10 +9,16 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"vue": "^3.3.4",
 		"@vitejs/plugin-vue": "^4.2.3",
+		"@xuni-shetuan/database": "workspace:^",
+		"@xuni-shetuan/api": "workspace:^",
 		"typescript": "^5.0.2",
 		"vite": "^4.4.5",
 		"vue-tsc": "^1.8.5"
+	},
+	"dependencies": {
+		"@trpc/client": "10.39.0",
+		"superjson": "^2.2.0",
+		"vue": "^3.3.4"
 	}
 }

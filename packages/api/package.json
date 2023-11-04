@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "./index.js",
+  "private": true,
   "scripts": {
     "dev": "npx tsup --watch",
     "build": "npx tsup"
   },
   "keywords": [],
   "author": "WangLaoQi (https://github.com/Lao-Qi)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@trpc/server": "10.39.0",
+    "@xuni-shetuan/database": "workspace:^",
+    "superjson": "^2.2.0",
+    "zod": "^3.22.4"
+  }
 }
